@@ -47,7 +47,6 @@ namespace gr {
        * creating new instances.
        */
       static sptr make(const int Q, const std::vector<float> &symbol_table);
-      int demodulator(const float input[]);
     };
 
   } // namespace zigbee
