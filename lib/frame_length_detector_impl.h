@@ -36,8 +36,6 @@ namespace gr {
       int d_process;// the bits to be processed in state 2.
       int no;// the output pointer. 
       std::vector<float> d_symbol_table; //the 16-ary symbol table used in demodulation.
-      std::vector<float> d_byte_in_process; // the spreaded frame_length part at rx. 
-      filter::kernel::fir_filter_fff *d_filter; // the decimating filter used to demod.
       std::vector<int> d_result;// the demodulated results in state 2. 
      public:
       frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table);

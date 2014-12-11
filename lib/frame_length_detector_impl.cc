@@ -43,7 +43,7 @@ namespace gr {
     frame_length_detector_impl::frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table)
       : gr::block("frame_length_detector",
               gr::io_signature::make2(2, 2, sizeof(float), sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(float))),
+              gr::io_signature::make(1, 1, sizeof(char))),
 	d_Q(Q),
 	d_symbol_table(symbol_table),
 	d_state(0),
@@ -95,7 +95,7 @@ namespace gr {
     {
         const float *in_data = (const float *) input_items[0];
         const char *in_flag = (const char *) input_items[1];
-        float *out = (float *) output_items[0];
+        char *out = (char *) output_items[0];
 	int l = 0; //state 0 index;
 	int j=0;
 	int ni=std::min(ninput_items[0],ninput_items[1]);
@@ -154,16 +154,6 @@ namespace gr {
           }
 
           int d_byte_out[2];
-          /*for(j =0 ;j < d_process; j++){
-            if(j%(2*d_Q)==0){
-              no = j/(2*d_Q);
-              d_byte_out[0] = demodulator(&in_data[j]);
-              d_byte_out[1] = demodulator(&in_data[j+d_Q]);
-              d_result.push_back(d_byte_out[0]+ 16*d_byte_out[1]);
-              printf("the %dth result is %d\n", no+1,d_result[no]);
-              out[no]=d_result[no];
-            }
-          }*/
           for(j=0; j<d_process; j++){
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
 	    d_byte_out[1] = demodulator(&in_data[(2*j+1)*d_Q]);
