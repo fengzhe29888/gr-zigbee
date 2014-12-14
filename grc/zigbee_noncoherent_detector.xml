@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<block>
+  <name>noncoherent_detector</name>
+  <key>zigbee_noncoherent_detector</key>
+  <category>zigbee</category>
+  <import>import zigbee</import>
+  <make>zigbee.noncoherent_detector($Q, $symbol_table)</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+  <param>
+    <name>Symbol Table</name>
+    <key>symbol_table</key>
+    <type>complex_vector</type>
+  </param>
+  <param>
+    <name>Q</name>
+    <key>Q</key>
+    <value>64</value>
+    <type>int</type>
+  </param>
+
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>in_data</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>in_flag</name>
+    <type>byte</type>
+  </sink>
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+</block>
