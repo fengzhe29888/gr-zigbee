@@ -22,5 +22,6 @@
 ########################################################################
 install(FILES
     api.h
-    frame_length_detector.h DESTINATION include/zigbee
+    frame_length_detector.h
+    noncoherent_detector.h DESTINATION include/zigbee
 )

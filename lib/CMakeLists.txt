@@ -25,7 +25,8 @@ include(GrPlatform) #define LIB_SUFFIX
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND zigbee_sources
-    frame_length_detector_impl.cc )
+    frame_length_detector_impl.cc
+    noncoherent_detector_impl.cc )
 
 set(zigbee_sources "${zigbee_sources}" PARENT_SCOPE)
 if(NOT zigbee_sources)
@@ -61,6 +62,7 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 list(APPEND test_zigbee_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_zigbee.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_zigbee.cc
+    ${CMAKE_CURRENT_SOURCE_DIR}/qa_noncoherent_detector.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/)
 
 add_executable(test-zigbee ${test_zigbee_sources})
