@@ -134,6 +134,7 @@ namespace gr {
             d_length[jj] = demodulator(&in_data[jj*d_Q]);
           }
           d_N = d_length[0]+d_length[1]*16;
+          d_N = 17;
           if(d_N > 127){// Since 7 bits is used for frame length, the frame length is wrong if it's greater than 127.
             d_state = 0;	        //so we enter state 0 to search the next flags. 
             //consume_each(1); // the input pointer is updated by 1.

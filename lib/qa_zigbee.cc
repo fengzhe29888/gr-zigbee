@@ -26,13 +26,11 @@
  */
 
 #include "qa_zigbee.h"
-#include "qa_noncoherent_detector.h"
 
 CppUnit::TestSuite *
 qa_zigbee::suite()
 {
   CppUnit::TestSuite *s = new CppUnit::TestSuite("zigbee");
-  s->addTest(gr::zigbee::qa_noncoherent_detector::suite());
 
   return s;
 }

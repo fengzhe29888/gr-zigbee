@@ -62,7 +62,6 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 list(APPEND test_zigbee_sources
     ${CMAKE_CURRENT_SOURCE_DIR}/test_zigbee.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/qa_zigbee.cc
-    ${CMAKE_CURRENT_SOURCE_DIR}/qa_noncoherent_detector.cc
     ${CMAKE_CURRENT_SOURCE_DIR}/)
 
 add_executable(test-zigbee ${test_zigbee_sources})
