@@ -186,10 +186,12 @@ namespace gr {
             d_state = 0;
             pmt::pmt_t meta = pmt::make_dict();
             meta = pmt::dict_add(meta, pmt::mp("frame_length"), pmt::from_long(d_N));
-            for(int bi =0; bi<d_N; bi++){
+            /*for(int bi =0; bi<d_N; bi++){
               printf("%dth buffer is %d\n",bi, buf[bi]);
             }//*/
-            pmt::pmt_t payload = pmt::make_blob(buf, d_N);
+            pmt::pmt_t payload = pmt::make_blob(&buf[0], d_N);
+            buf_index = &buf[0];
+            char buf[128];
             message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{

@@ -35,7 +35,7 @@ namespace gr {
       int d_remaining;//the remaining bits to be processed at the beginning state 2.
       int d_process;// the bits to be processed in state 2.
       char buf[128];
-      char *buf_index = buf;
+      char *buf_index = &buf[0];
       std::vector<gr_complex> d_symbol_table; //the 16-ary symbol table used in demodulation.
      public:
       noncoherent_detector_impl(const int Q, const std::vector<gr_complex> &symbol_table);
