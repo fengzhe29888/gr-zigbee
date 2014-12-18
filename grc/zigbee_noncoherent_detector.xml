@@ -46,4 +46,8 @@
     <name>out</name>
     <type>byte</type>
   </source>
+  <source>
+    <name>msg_out</name>
+    <type>message</type>
+  </source>
 </block>

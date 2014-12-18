@@ -48,8 +48,11 @@ namespace gr {
 	d_Q(Q),
 	d_symbol_table(symbol_table),
 	d_state(0),
-	d_remaining(0)
-    {}
+	d_remaining(0),
+        buf_index(&buf[0])
+    {
+      message_port_register_out(pmt::mp("msg_out"));
+    }
 
     /*
      * Our virtual destructor.
@@ -92,7 +95,7 @@ namespace gr {
           }
 	  d_out =0;
         }// for j=0~16; 
-	printf("demodulated result is %f and %d\n",max_out, max_index);
+	//printf("demodulated result is %f and %d\n",max_out, max_index);
         return max_index;
     }
 
@@ -108,6 +111,7 @@ namespace gr {
 	int j=0;
 	int ni=std::min(ninput_items[0],ninput_items[1]);
         int process;
+        //pmt::pmt_t payload;
 	//printf("At the beginning: ni is %d, %d, %d\n",ni,ninput_items[0],ninput_items[1]);
         if(d_state == 0){
           for(int l = 0; l < ni; l++){
@@ -134,7 +138,7 @@ namespace gr {
             d_length[jj] = demodulator(&in_data[jj*d_Q]);
           }
           d_N = d_length[0]+d_length[1]*16;
-          d_N = 17;
+          //d_N = 17;
           if(d_N > 127){// Since 7 bits is used for frame length, the frame length is wrong if it's greater than 127.
             d_state = 0;	        //so we enter state 0 to search the next flags. 
             //consume_each(1); // the input pointer is updated by 1.
@@ -145,7 +149,8 @@ namespace gr {
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
             //printf("d_N %d and d_remaining %d\n",2*d_N*d_Q, d_remaining);
 	    //k++;
-            //printf("The %dth frame length is %d\n",k, d_N);
+            printf("The frame length is %d\n", d_N);
+
             consume_each(2*d_Q);
             //printf("end of state 1 input pointer updated %d\n",j);
             //printf("after state 1, the current input data and flags are: in_data is %f,in_flag is %d\n",in_data[2*d_Q],in_flag[2*d_Q]);
@@ -153,7 +158,6 @@ namespace gr {
             return 0;
           }
         }//else d_state ==1
-
         else if(d_state == 2){
 	     //printf("d_remaining is %d\n",d_remaining);
           if(d_remaining > noutput_items){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
@@ -168,7 +172,6 @@ namespace gr {
             d_remaining = 0;
             //printf("d_remaining smaller than ni d_process: %d and d_remaining:%d\n", d_process, d_remaining);
           }
-
           int d_byte_out[2];
           for(j=0; j<process; j++){
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
@@ -177,15 +180,23 @@ namespace gr {
             //printf("the %dth result is %d\n", j+1,d_result[j]);
 	    out[j] = result;
           }
-
+          std::memcpy(buf_index, out, process);
+          buf_index = buf_index + process;
           if(d_remaining ==0){
             d_state = 0;
+            pmt::pmt_t meta = pmt::make_dict();
+            meta = pmt::dict_add(meta, pmt::mp("frame_length"), pmt::from_long(d_N));
+            for(int bi =0; bi<d_N; bi++){
+              printf("%dth buffer is %d\n",bi, buf[bi]);
+            }//*/
+            pmt::pmt_t payload = pmt::make_blob(buf, d_N);
+            message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{
             d_state = 2;
 	       //printf("continuing state =2, d_remaining is %d, processed is %d\n",d_remaining, d_process);
           }
-          d_result.clear();
+
 	     //printf("the input pointer update after state 2 is %d\n",j);
           consume_each(process*2*d_Q);
 	     //printf("In state 2 it consumed %d samples: the current in_data is %f,in_flag is %d\n",d_process,in_data[d_process],in_flag[d_process]);
