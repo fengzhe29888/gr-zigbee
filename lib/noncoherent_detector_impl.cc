@@ -191,7 +191,7 @@ namespace gr {
             }//*/
             pmt::pmt_t payload = pmt::make_blob(&buf[0], d_N);
             buf_index = &buf[0];
-            char buf[128];
+
             message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{
