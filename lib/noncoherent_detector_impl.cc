@@ -48,8 +48,7 @@ namespace gr {
 	d_Q(Q),
 	d_symbol_table(symbol_table),
 	d_state(0),
-	d_remaining(0),
-        buf_index(&buf[0])
+	d_remaining(0)
     {
       message_port_register_out(pmt::mp("msg_out"));
     }
@@ -189,9 +188,8 @@ namespace gr {
             /*for(int bi =0; bi<d_N; bi++){
               printf("%dth buffer is %d\n",bi, buf[bi]);
             }//*/
-            pmt::pmt_t payload = pmt::make_blob(&buf[0], d_N);
-            buf_index = &buf[0];
-
+            pmt::pmt_t payload = pmt::make_blob(&d_buf[0], d_N);
+            buf_index = &d_buf[0];
             message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{
