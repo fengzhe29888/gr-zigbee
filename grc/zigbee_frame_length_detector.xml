@@ -4,7 +4,7 @@
   <key>zigbee_frame_length_detector</key>
   <category>zigbee</category>
   <import>import zigbee</import>
-  <make>zigbee.frame_length_detector($Q, $symbol_table)</make>
+  <make>zigbee.frame_length_detector($Q, $symbol_table, $preset_N)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -19,6 +19,12 @@
     <name>Q</name>
     <key>Q</key>
     <value>64</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Preset Frame Length</name>
+    <key>preset_N</key>
+    <value>-1</value>
     <type>int</type>
   </param>
 

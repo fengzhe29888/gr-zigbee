@@ -46,7 +46,7 @@ namespace gr {
        * class. zigbee::frame_length_detector::make is the public interface for
        * creating new instances.
        */
-      static sptr make(const int Q, const std::vector<float> &symbol_table);
+      static sptr make(const int Q, const std::vector<float> &symbol_table, int preset_N);
     };
 
   } // namespace zigbee

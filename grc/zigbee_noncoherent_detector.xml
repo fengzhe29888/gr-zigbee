@@ -4,7 +4,7 @@
   <key>zigbee_noncoherent_detector</key>
   <category>zigbee</category>
   <import>import zigbee</import>
-  <make>zigbee.noncoherent_detector($Q, $symbol_table)</make>
+  <make>zigbee.noncoherent_detector($Q, $symbol_table,$preset_N)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -21,7 +21,12 @@
     <value>64</value>
     <type>int</type>
   </param>
-
+  <param>
+    <name>Preset Frame Length</name>
+    <key>preset_N</key>
+    <value>-1</value>
+    <type>int</type>
+  </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:
        * name (an identifier for the GUI)

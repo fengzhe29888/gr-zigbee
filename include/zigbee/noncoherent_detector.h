@@ -46,7 +46,7 @@ namespace gr {
        * class. zigbee::noncoherent_detector::make is the public interface for
        * creating new instances.
        */
-      static sptr make(const int Q, const std::vector<gr_complex> &symbol_table);
+      static sptr make(const int Q, const std::vector<gr_complex> &symbol_table, int preset_N);
     };
 
   } // namespace zigbee
