@@ -48,10 +48,6 @@
        * vlen
        * optional (set to 1 for optional inputs) -->
   <source>
-    <name>out</name>
-    <type>byte</type>
-  </source>
-  <source>
     <name>msg_out</name>
     <type>message</type>
   </source>

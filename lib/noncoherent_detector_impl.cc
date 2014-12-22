@@ -44,7 +44,7 @@ namespace gr {
     noncoherent_detector_impl::noncoherent_detector_impl(const int Q, const std::vector<gr_complex> &symbol_table, int preset_N)
       : gr::block("noncoherent_detector",
               gr::io_signature::make2(2, 2, sizeof(gr_complex), sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(char))),
+              gr::io_signature::make(0, 0, 0)),
 	d_Q(Q),
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
@@ -60,14 +60,14 @@ namespace gr {
     noncoherent_detector_impl::~noncoherent_detector_impl()
     {
     }
-
+/*
     void
     noncoherent_detector_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
         ninput_items_required[0] = 2*(noutput_items)*d_Q;
 	ninput_items_required[1] = 2*(noutput_items)*d_Q;
     }
-
+//*/
     int
     noncoherent_detector_impl::demodulator(const gr_complex input[])
     {
@@ -107,10 +107,12 @@ namespace gr {
     {
         const gr_complex *in_data = (const gr_complex *) input_items[0];
         const char *in_flag = (const char *) input_items[1];
-        char *out = (char *) output_items[0];
+        //char *out = (char *) output_items[0];
 	int j=0;
 	int ni=std::min(ninput_items[0],ninput_items[1]);
+        int no = int(ni/(2*d_Q)); 
         int process;
+        char out[128];
         //pmt::pmt_t payload;
 	//printf("At the beginning: ni is %d, %d, %d\n",ni,ninput_items[0],ninput_items[1]);
         if(d_state == 0){
@@ -162,9 +164,9 @@ namespace gr {
         }//else d_state ==1
         else if(d_state == 2){
 	     //printf("d_remaining is %d\n",d_remaining);
-          if(d_remaining > noutput_items){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
+          if(d_remaining > no){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
             //printf("noutput_items is %d, d_remaining is %d\n",noutput_items, d_remaining);
-            process = noutput_items; 
+            process = no; 
             d_remaining = d_remaining -process;
             //printf("d_remaining lager than noutput_items d_process: %d and d_remaining:%d\n", d_process, d_remaining);
           }
@@ -205,6 +207,7 @@ namespace gr {
 	     //printf("In state 2 it consumed %d samples: the current in_data is %f,in_flag is %d\n",d_process,in_data[d_process],in_flag[d_process]);
           //return no+1;
 	  return process;
+          //return 0;
         }//d_state =2*/
     }//work
 
