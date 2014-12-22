@@ -360,7 +360,7 @@ class frame_length_detector(object):
 
         To avoid accidental use of raw pointers, zigbee::frame_length_detector's constructor is in a private implementation class. zigbee::frame_length_detector::make is the public interface for creating new instances.
 
-        Params: (Q, symbol_table)
+        Params: (Q, symbol_table, preset_N)
         """
         return _zigbee_swig.frame_length_detector_make(*args, **kwargs)
 
@@ -378,7 +378,7 @@ def frame_length_detector_make(*args, **kwargs):
 
     To avoid accidental use of raw pointers, zigbee::frame_length_detector's constructor is in a private implementation class. zigbee::frame_length_detector::make is the public interface for creating new instances.
 
-    Params: (Q, symbol_table)
+    Params: (Q, symbol_table, preset_N)
     """
   return _zigbee_swig.frame_length_detector_make(*args, **kwargs)
 
@@ -408,7 +408,7 @@ class frame_length_detector_sptr(object):
 
         To avoid accidental use of raw pointers, zigbee::frame_length_detector's constructor is in a private implementation class. zigbee::frame_length_detector::make is the public interface for creating new instances.
 
-        Params: (Q, symbol_table)
+        Params: (Q, symbol_table, preset_N)
         """
         return _zigbee_swig.frame_length_detector_sptr_make(self, *args, **kwargs)
 
@@ -666,12 +666,20 @@ frame_length_detector_sptr.__repr__ = lambda self: "<gr_block %s (%d)>" % (self.
 frame_length_detector = frame_length_detector.make;
 
 class noncoherent_detector(object):
-    """Proxy of C++ gr::zigbee::noncoherent_detector class"""
+    """<+description of block+>"""
     thisown = _swig_property(lambda x: x.this.own(), lambda x, v: x.this.own(v), doc='The membership flag')
     def __init__(self, *args, **kwargs): raise AttributeError("No constructor defined")
     __repr__ = _swig_repr
     def make(*args, **kwargs):
-        """make(int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr"""
+        """
+        make(int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr
+
+        Return a shared_ptr to a new instance of zigbee::noncoherent_detector.
+
+        To avoid accidental use of raw pointers, zigbee::noncoherent_detector's constructor is in a private implementation class. zigbee::noncoherent_detector::make is the public interface for creating new instances.
+
+        Params: (Q, symbol_table, preset_N)
+        """
         return _zigbee_swig.noncoherent_detector_make(*args, **kwargs)
 
     make = staticmethod(make)
@@ -681,7 +689,15 @@ noncoherent_detector_swigregister = _zigbee_swig.noncoherent_detector_swigregist
 noncoherent_detector_swigregister(noncoherent_detector)
 
 def noncoherent_detector_make(*args, **kwargs):
-  """noncoherent_detector_make(int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr"""
+  """
+    noncoherent_detector_make(int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr
+
+    Return a shared_ptr to a new instance of zigbee::noncoherent_detector.
+
+    To avoid accidental use of raw pointers, zigbee::noncoherent_detector's constructor is in a private implementation class. zigbee::noncoherent_detector::make is the public interface for creating new instances.
+
+    Params: (Q, symbol_table, preset_N)
+    """
   return _zigbee_swig.noncoherent_detector_make(*args, **kwargs)
 
 class noncoherent_detector_sptr(object):
@@ -703,7 +719,15 @@ class noncoherent_detector_sptr(object):
     __swig_destroy__ = _zigbee_swig.delete_noncoherent_detector_sptr
     __del__ = lambda self : None;
     def make(self, *args, **kwargs):
-        """make(noncoherent_detector_sptr self, int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr"""
+        """
+        make(noncoherent_detector_sptr self, int const Q, pmt_vector_cfloat symbol_table, int preset_N) -> noncoherent_detector_sptr
+
+        Return a shared_ptr to a new instance of zigbee::noncoherent_detector.
+
+        To avoid accidental use of raw pointers, zigbee::noncoherent_detector's constructor is in a private implementation class. zigbee::noncoherent_detector::make is the public interface for creating new instances.
+
+        Params: (Q, symbol_table, preset_N)
+        """
         return _zigbee_swig.noncoherent_detector_sptr_make(self, *args, **kwargs)
 
     def history(self):
