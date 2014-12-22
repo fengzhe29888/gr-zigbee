@@ -43,13 +43,15 @@ namespace gr {
     frame_length_detector_impl::frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N)
       : gr::block("frame_length_detector",
               gr::io_signature::make2(2, 2, sizeof(float), sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(char))),
+              gr::io_signature::make(0, 0, 0)),
 	d_Q(Q),
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
 	d_state(0),
 	d_remaining(0)
-    {}
+    {
+      message_port_register_out(pmt::mp("msg_out"));
+    }
 
     /*
      * Our virtual destructor.
@@ -57,14 +59,14 @@ namespace gr {
     frame_length_detector_impl::~frame_length_detector_impl()
     {
     }
-
+/*
     void
     frame_length_detector_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
         ninput_items_required[0] = 2*(noutput_items)*d_Q;
 	ninput_items_required[1] = 2*(noutput_items)*d_Q;
     }
-
+//*/
     int
     frame_length_detector_impl::demodulator(const float input[])
     {
@@ -94,10 +96,12 @@ namespace gr {
     {
         const float *in_data = (const float *) input_items[0];
         const char *in_flag = (const char *) input_items[1];
-        char *out = (char *) output_items[0];
+        //char *out = (char *) output_items[0];
 	int j=0;
 	int ni=std::min(ninput_items[0],ninput_items[1]);
+        int no = int(ni/(2*d_Q)); 
         int process;
+        char out[128];
 	//printf("At the beginning: ni is %d, %d, %d\n",ni,ninput_items[0],ninput_items[1]);
         if(d_state == 0){
           for(int l = 0; l < ni; l++){
@@ -139,7 +143,7 @@ namespace gr {
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
             //printf("d_N %d and d_remaining %d\n",2*d_N*d_Q, d_remaining);
-            //printf("frame length is %d\n",d_N);
+            printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
             //printf("end of state 1 input pointer updated %d\n",j);
             //printf("after state 1, the current input data and flags are: in_data is %f,in_flag is %d\n",in_data[2*d_Q],in_flag[2*d_Q]);
@@ -149,9 +153,9 @@ namespace gr {
         }//else d_state ==1
         else if(d_state == 2){
 	  //printf("d_remaining is %d\n",d_remaining);
-          if(d_remaining > noutput_items){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
+          if(d_remaining > no){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
             //printf("noutput_items is %d, d_remaining is %d\n",noutput_items, d_remaining);
-            process = noutput_items; 
+            process = no; 
             d_remaining = d_remaining -process;
             //printf("d_remaining lager than noutput_items process: %d and d_remaining:%d\n", process, d_remaining);
           }
@@ -170,9 +174,15 @@ namespace gr {
             //printf("the %dth result is %d\n", j+1,result);
 	    out[j] = result;
           }
-
+          std::memcpy(buf_index, out, process);
+          buf_index = buf_index + process;
           if(d_remaining ==0){
             d_state = 0;
+            pmt::pmt_t meta = pmt::make_dict();
+            meta = pmt::dict_add(meta, pmt::mp("frame_length"), pmt::from_long(d_N));
+            pmt::pmt_t payload = pmt::make_blob(&d_buf[0], d_N);
+            buf_index = &d_buf[0];
+            message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{
             d_state = 2;
