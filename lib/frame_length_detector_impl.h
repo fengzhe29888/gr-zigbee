@@ -36,15 +36,13 @@ namespace gr {
       int d_remaining;//the remaining bits to be processed at the beginning state 2.
       char d_buf[128];
       char *buf_index = &d_buf[0];
-      //int d_process;// the bits to be processed in state 2.
       std::vector<float> d_symbol_table; //the 16-ary symbol table used in demodulation.
-      //std::vector<int> d_result;// the demodulated results in state 2. 
+
      public:
       frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N);
       ~frame_length_detector_impl();
 
       // Where all the action really happens
-      //void forecast (int noutput_items, gr_vector_int &ninput_items_required);
       int demodulator(const float input[]);
       int general_work(int noutput_items,
 		       gr_vector_int &ninput_items,

@@ -60,14 +60,7 @@ namespace gr {
     noncoherent_detector_impl::~noncoherent_detector_impl()
     {
     }
-/*
-    void
-    noncoherent_detector_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
-    {
-        ninput_items_required[0] = 2*(noutput_items)*d_Q;
-	ninput_items_required[1] = 2*(noutput_items)*d_Q;
-    }
-//*/
+
     int
     noncoherent_detector_impl::demodulator(const gr_complex input[])
     {
@@ -77,9 +70,6 @@ namespace gr {
         int max_index =0; 
 	//16-ary demodulation
         for(int dj = 0; dj < 16; dj++){
-          /*for(int dk = 0; dk < d_Q; dk++){
-            d_matched_out = d_matched_out + d_symbol_table[dj*d_Q+dk]*input[dk]; 
-          }*/
           std::vector<gr_complex> multply(d_Q);
           volk_32fc_x2_multiply_conjugate_32fc(&multply[0], input, &d_symbol_table[dj*d_Q], d_Q);
           for(int dk =0; dk < d_Q; dk++){
@@ -113,23 +103,19 @@ namespace gr {
         int no = int(ni/(2*d_Q)); 
         int process;
         char out[128];
-        //pmt::pmt_t payload;
 	//printf("At the beginning: ni is %d, %d, %d\n",ni,ninput_items[0],ninput_items[1]);
         if(d_state == 0){
           for(int l = 0; l < ni; l++){
 	    //flags have not been detected yet
             if(in_flag[l] != 0){
               d_state = 1;
-	      //printf("In state 0 consumed %d\n",l+1);
               consume_each(l+1);
-	      //printf("after state 0 consume: in_data is %f,in_flag is %d\n",in_data[l+1],in_flag[l+1]);
-	      //printf("ni is %d,%d,%d\n",ni,ninput_items[0],ninput_items[1]);
 	      return 0;
 	    }
           }
-	      consume_each(ni);
-	      return 0;
-	   }
+	  consume_each(ni);
+	  return 0;
+	}
         else if(d_state==1){
           if(ni<d_Q*2) {//not enough input samples for length demodulation
             printf("Not enough smaples for length demodulation\n");
@@ -145,33 +131,23 @@ namespace gr {
           }
           if(d_N > 127){// Since 7 bits is used for frame length, the frame length is wrong if it's greater than 127.
             d_state = 0;	        //so we enter state 0 to search the next flags. 
-            //consume_each(1); // the input pointer is updated by 1.
 	    printf("d_N is greater than 127, wrong! search for next flag!! %d\n", d_N); 
-            //return 0;		//printf("detected frame length is out of range, research a flag");		
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            //printf("d_N %d and d_remaining %d\n",2*d_N*d_Q, d_remaining);
-	    //k++;
             printf("The frame length is %d\n", d_N);
-
             consume_each(2*d_Q);
-            //printf("end of state 1 input pointer updated %d\n",j);
-            //printf("after state 1, the current input data and flags are: in_data is %f,in_flag is %d\n",in_data[2*d_Q],in_flag[2*d_Q]);
             d_state = 2;
             return 0;
           }
         }//else d_state ==1
         else if(d_state == 2){
-	     //printf("d_remaining is %d\n",d_remaining);
           if(d_remaining > no){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
-            //printf("noutput_items is %d, d_remaining is %d\n",noutput_items, d_remaining);
             process = no; 
             d_remaining = d_remaining -process;
             //printf("d_remaining lager than noutput_items d_process: %d and d_remaining:%d\n", d_process, d_remaining);
           }
           else{
-            //printf("noutput_items is %d, and d_remaining is %d\n",noutput_items, d_remaining);
             process = d_remaining;
             d_remaining = 0;
             //printf("d_remaining smaller than ni d_process: %d and d_remaining:%d\n", d_process, d_remaining);
@@ -181,7 +157,6 @@ namespace gr {
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
 	    d_byte_out[1] = demodulator(&in_data[(2*j+1)*d_Q]);
             int result = d_byte_out[0]+ 16*d_byte_out[1];
-            //printf("the %dth result is %d\n", j+1,d_result[j]);
 	    out[j] = result;
           }
           std::memcpy(buf_index, out, process);
@@ -204,10 +179,7 @@ namespace gr {
 
 	     //printf("the input pointer update after state 2 is %d\n",j);
           consume_each(process*2*d_Q);
-	     //printf("In state 2 it consumed %d samples: the current in_data is %f,in_flag is %d\n",d_process,in_data[d_process],in_flag[d_process]);
-          //return no+1;
 	  return process;
-          //return 0;
         }//d_state =2*/
     }//work
 

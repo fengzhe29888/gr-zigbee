@@ -59,14 +59,7 @@ namespace gr {
     frame_length_detector_impl::~frame_length_detector_impl()
     {
     }
-/*
-    void
-    frame_length_detector_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
-    {
-        ninput_items_required[0] = 2*(noutput_items)*d_Q;
-	ninput_items_required[1] = 2*(noutput_items)*d_Q;
-    }
-//*/
+
     int
     frame_length_detector_impl::demodulator(const float input[])
     {
@@ -109,14 +102,10 @@ namespace gr {
             if(in_flag[l] != 0){
               d_state = 1;
               consume_each(l+1);
-	      //printf("In state 0 consumed %d\n",l+1);
-	      //printf("after state 0 consume: in_data is %f,in_flag is %d\n",in_data[l+1],in_flag[l+1]);
-	      //printf("ni is %d,%d,%d\n",ni,ninput_items[0],ninput_items[1]);
 	      return 0;
 	    }
           }
 	  consume_each(ni);
-	  //printf("In state 0 consumed %d\n",ni);
 	  return 0;
         }
         else if(d_state==1){
@@ -132,35 +121,25 @@ namespace gr {
           if(d_preset_N > 0){
             d_N = d_preset_N;
           }
-
-
           if(d_N > 127){// Since 7 bits is used for frame length, the frame length is wrong if it's greater than 127.
             d_state = 0;	        //so we enter state 0 to search the next flags. 
-            //consume_each(1);// WHY??? // the input pointer is updated by 1.
             //printf("detected frame length is out of range, research a flag");
-            //return 0;		
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            //printf("d_N %d and d_remaining %d\n",2*d_N*d_Q, d_remaining);
             printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
-            //printf("end of state 1 input pointer updated %d\n",j);
-            //printf("after state 1, the current input data and flags are: in_data is %f,in_flag is %d\n",in_data[2*d_Q],in_flag[2*d_Q]);
             d_state = 2;
             return 0;
           }
         }//else d_state ==1
         else if(d_state == 2){
-	  //printf("d_remaining is %d\n",d_remaining);
           if(d_remaining > no){ // if d_remaining is greater than ni, we only process ni bits with the current buffer.
-            //printf("noutput_items is %d, d_remaining is %d\n",noutput_items, d_remaining);
             process = no; 
             d_remaining = d_remaining -process;
             //printf("d_remaining lager than noutput_items process: %d and d_remaining:%d\n", process, d_remaining);
           }
           else{
-            //printf("noutput_items is %d, and d_remaining is %d\n",noutput_items, d_remaining);
             process = d_remaining;
             d_remaining = 0;
             //printf("d_remaining smaller than ni process: %d and d_remaining:%d\n", process, d_remaining);
@@ -171,7 +150,6 @@ namespace gr {
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
 	    d_byte_out[1] = demodulator(&in_data[(2*j+1)*d_Q]);
             int result = d_byte_out[0]+ 16*d_byte_out[1];
-            //printf("the %dth result is %d\n", j+1,result);
 	    out[j] = result;
           }
           std::memcpy(buf_index, out, process);
@@ -188,10 +166,7 @@ namespace gr {
             d_state = 2;
 	    //printf("continuing state =2, d_remaining is %d, processed is %d\n",d_remaining, process);
           }
-	  //printf("the input pointer update after state 2 is %d\n",j);
           consume_each(process*2*d_Q);
-	  //printf("In state 2 it consumed %d samples: the current in_data is %f,in_flag is %d\n",process,in_data[process],in_flag[process]);
-          //return no+1;
 	  return process;
         }//d_state =2*/
     }//work

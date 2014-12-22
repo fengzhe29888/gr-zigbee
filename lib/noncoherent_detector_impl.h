@@ -34,7 +34,6 @@ namespace gr {
       int d_preset_N;
       int d_state; // the processing state; 0: searching for sync, 1:synced, looking for d_N by demod, 2: synced, output the N symbols. 
       int d_remaining;//the remaining bits to be processed at the beginning state 2.
-      int d_process;// the bits to be processed in state 2.
       char d_buf[128];
       char *buf_index = &d_buf[0];
       std::vector<gr_complex> d_symbol_table; //the 16-ary symbol table used in demodulation.
@@ -43,7 +42,6 @@ namespace gr {
       ~noncoherent_detector_impl();
 
       // Where all the action really happens
-      //void forecast (int noutput_items, gr_vector_int &ninput_items_required);
       int demodulator(const gr_complex input[]);
       int general_work(int noutput_items,
 		       gr_vector_int &ninput_items,
