@@ -110,7 +110,7 @@ namespace gr {
         }
         else if(d_state==1){
           if(ni<d_Q*2) {//not enough input samples for length demodulation
-            printf("Not enough smaples for length demodulation\n");
+            //printf("Not enough smaples for length demodulation\n");
             return 0;
           }
           int d_length[2];
