@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2014 <+YOU OR YOUR COMPANY+>.
+ * Copyright 2014 Zhe Feng, Achilleas Anastasopoulos.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,15 +18,15 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_IMPL_H
-#define INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_IMPL_H
+#ifndef INCLUDED_ZIGBEE_FM_SOFT_DETECTOR_IMPL_H
+#define INCLUDED_ZIGBEE_FM_SOFT_DETECTOR_IMPL_H
 
-#include <zigbee/frame_length_detector.h>
+#include <zigbee/fm_soft_detector.h>
 #include <gnuradio/filter/fir_filter.h>
 namespace gr {
   namespace zigbee {
 
-    class frame_length_detector_impl : public frame_length_detector
+    class fm_soft_detector_impl : public fm_soft_detector
     {
      private:
       int d_N; //the frame length calculated; 
@@ -39,8 +39,8 @@ namespace gr {
       std::vector<float> d_symbol_table; //the 16-ary symbol table used in demodulation.
 
      public:
-      frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N);
-      ~frame_length_detector_impl();
+      fm_soft_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N);
+      ~fm_soft_detector_impl();
 
       // Where all the action really happens
       int demodulator(const float input[]);
@@ -53,5 +53,5 @@ namespace gr {
   } // namespace zigbee
 } // namespace gr
 
-#endif /* INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_IMPL_H */
+#endif /* INCLUDED_ZIGBEE_FM_SOFT_DETECTOR_IMPL_H */
 

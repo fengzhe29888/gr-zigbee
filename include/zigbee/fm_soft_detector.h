@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2014 <+YOU OR YOUR COMPANY+>.
+ * Copyright 2014 Zhe Feng, Achilleas Anastasopoulos.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -19,8 +19,8 @@
  */
 
 
-#ifndef INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_H
-#define INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_H
+#ifndef INCLUDED_ZIGBEE_FM_SOFT_DETECTOR_H
+#define INCLUDED_ZIGBEE_FM_SOFT_DETECTOR_H
 
 #include <zigbee/api.h>
 #include <gnuradio/block.h>
@@ -33,17 +33,17 @@ namespace gr {
      * \ingroup zigbee
      *
      */
-    class ZIGBEE_API frame_length_detector : virtual public gr::block
+    class ZIGBEE_API fm_soft_detector : virtual public gr::block
     {
      public:
-      typedef boost::shared_ptr<frame_length_detector> sptr;
+      typedef boost::shared_ptr<fm_soft_detector> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of zigbee::frame_length_detector.
+       * \brief Return a shared_ptr to a new instance of zigbee::fm_soft_detector.
        *
-       * To avoid accidental use of raw pointers, zigbee::frame_length_detector's
+       * To avoid accidental use of raw pointers, zigbee::fm_soft_detector's
        * constructor is in a private implementation
-       * class. zigbee::frame_length_detector::make is the public interface for
+       * class. zigbee::fm_soft_detector::make is the public interface for
        * creating new instances.
        */
       static sptr make(const int Q, const std::vector<float> &symbol_table, int preset_N);
@@ -52,5 +52,5 @@ namespace gr {
   } // namespace zigbee
 } // namespace gr
 
-#endif /* INCLUDED_ZIGBEE_FRAME_LENGTH_DETECTOR_H */
+#endif /* INCLUDED_ZIGBEE_FM_SOFT_H */
 

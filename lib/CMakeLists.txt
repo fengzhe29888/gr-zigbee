@@ -25,7 +25,7 @@ include(GrPlatform) #define LIB_SUFFIX
 include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND zigbee_sources
-    frame_length_detector_impl.cc
+    fm_soft_detector_impl.cc
     noncoherent_detector_impl.cc )
 
 set(zigbee_sources "${zigbee_sources}" PARENT_SCOPE)

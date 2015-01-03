@@ -17,6 +17,6 @@
 # the Free Software Foundation, Inc., 51 Franklin Street,
 # Boston, MA 02110-1301, USA.
 install(FILES
-    zigbee_frame_length_detector.xml
+    zigbee_fm_soft_detector.xml
     zigbee_noncoherent_detector.xml DESTINATION share/gnuradio/grc/blocks
 )

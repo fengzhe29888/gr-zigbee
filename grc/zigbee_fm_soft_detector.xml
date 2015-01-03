@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <block>
-  <name>frame_length_detector</name>
-  <key>zigbee_frame_length_detector</key>
+  <name>fm_soft_detector</name>
+  <key>zigbee_fm_soft_detector</key>
   <category>zigbee</category>
   <import>import zigbee</import>
-  <make>zigbee.frame_length_detector($Q, $symbol_table, $preset_N)</make>
+  <make>zigbee.fm_soft_detector($Q, $symbol_table, $preset_N)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name

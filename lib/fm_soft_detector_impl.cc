@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2014 <+YOU OR YOUR COMPANY+>.
+ * Copyright 2014 Zhe Feng, Achilleas Anastasopoulos.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,25 +23,25 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "frame_length_detector_impl.h"
+#include "fm_soft_detector_impl.h"
 #include <stdio.h>
 #include <volk/volk.h>
 
 namespace gr {
   namespace zigbee {
 
-    frame_length_detector::sptr
-    frame_length_detector::make(const int Q, const std::vector<float> &symbol_table, int preset_N)
+    fm_soft_detector::sptr
+    fm_soft_detector::make(const int Q, const std::vector<float> &symbol_table, int preset_N)
     {
       return gnuradio::get_initial_sptr
-        (new frame_length_detector_impl(Q, symbol_table, preset_N));
+        (new fm_soft_detector_impl(Q, symbol_table, preset_N));
     }
 
     /*
      * The private constructor
      */
-    frame_length_detector_impl::frame_length_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N)
-      : gr::block("frame_length_detector",
+    fm_soft_detector_impl::fm_soft_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N)
+      : gr::block("fm_soft_detector",
               gr::io_signature::make2(2, 2, sizeof(float), sizeof(char)),
               gr::io_signature::make(0, 0, 0)),
 	d_Q(Q),
@@ -56,12 +56,12 @@ namespace gr {
     /*
      * Our virtual destructor.
      */
-    frame_length_detector_impl::~frame_length_detector_impl()
+    fm_soft_detector_impl::~fm_soft_detector_impl()
     {
     }
 
     int
-    frame_length_detector_impl::demodulator(const float input[])
+    fm_soft_detector_impl::demodulator(const float input[])
     {
 	float max_out = -INFINITY; //the max matched filter output among 16 pulses. 
         int max_index =0; 
@@ -82,7 +82,7 @@ namespace gr {
     }
 
     int
-    frame_length_detector_impl::general_work (int noutput_items,
+    fm_soft_detector_impl::general_work (int noutput_items,
                        gr_vector_int &ninput_items,
                        gr_vector_const_void_star &input_items,
                        gr_vector_void_star &output_items)
