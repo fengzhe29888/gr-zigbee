@@ -26,7 +26,8 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND zigbee_sources
     fm_soft_detector_impl.cc
-    noncoherent_detector_impl.cc )
+    noncoherent_detector_impl.cc
+    )
 
 set(zigbee_sources "${zigbee_sources}" PARENT_SCOPE)
 if(NOT zigbee_sources)

@@ -18,5 +18,6 @@
 # Boston, MA 02110-1301, USA.
 install(FILES
     zigbee_fm_soft_detector.xml
-    zigbee_noncoherent_detector.xml DESTINATION share/gnuradio/grc/blocks
+    zigbee_noncoherent_detector.xml
+    DESTINATION share/gnuradio/grc/blocks
 )

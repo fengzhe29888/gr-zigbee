@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2014 Zhe Feng, Achilleas Anastasopoulos.
+ * Copyright 2014 <+YOU OR YOUR COMPANY+>.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,20 +32,20 @@ namespace gr {
   namespace zigbee {
 
     noncoherent_detector::sptr
-    noncoherent_detector::make(const int Q, const std::vector<gr_complex> &symbol_table,int preset_N)
+    noncoherent_detector::make(const int spc, const std::vector<gr_complex> &symbol_table,int preset_N)
     {
       return gnuradio::get_initial_sptr
-        (new noncoherent_detector_impl(Q, symbol_table, preset_N));
+        (new noncoherent_detector_impl(spc, symbol_table, preset_N));
     }
 
     /*
      * The private constructor
      */
-    noncoherent_detector_impl::noncoherent_detector_impl(const int Q, const std::vector<gr_complex> &symbol_table, int preset_N)
+    noncoherent_detector_impl::noncoherent_detector_impl(const int spc, const std::vector<gr_complex> &symbol_table, int preset_N)
       : gr::block("noncoherent_detector",
               gr::io_signature::make2(2, 2, sizeof(gr_complex), sizeof(char)),
               gr::io_signature::make(0, 0, 0)),
-	d_Q(Q),
+	d_Q(32*spc),
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
 	d_state(0),
@@ -135,7 +135,7 @@ namespace gr {
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            printf("The frame length is %d\n", d_N);
+            //printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
             d_state = 2;
             return 0;

@@ -1,6 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2014 Zhe Feng, Achilleas Anastasopoulos.
+ * Copyright 2014 <+YOU OR YOUR COMPANY+>.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -30,7 +30,7 @@ namespace gr {
     {
      private:
       int d_N; //the frame length calculated; 
-      int d_Q; //the spreading factor ; 
+      int d_Q; // samples_per_symbol
       int d_preset_N;
       int d_state; // the processing state; 0: searching for sync, 1:synced, looking for d_N by demod, 2: synced, output the N symbols. 
       int d_remaining;//the remaining bits to be processed at the beginning state 2.
@@ -38,7 +38,7 @@ namespace gr {
       char *buf_index = &d_buf[0];
       std::vector<gr_complex> d_symbol_table; //the 16-ary symbol table used in demodulation.
      public:
-      noncoherent_detector_impl(const int Q, const std::vector<gr_complex> &symbol_table, int preset_N);
+      noncoherent_detector_impl(const int spc, const std::vector<gr_complex> &symbol_table, int preset_N); // spc=samples_per_chip
       ~noncoherent_detector_impl();
 
       // Where all the action really happens
