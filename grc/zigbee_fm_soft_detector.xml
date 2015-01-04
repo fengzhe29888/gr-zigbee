@@ -4,7 +4,7 @@
   <key>zigbee_fm_soft_detector</key>
   <category>zigbee</category>
   <import>import zigbee</import>
-  <make>zigbee.fm_soft_detector($Q, $symbol_table, $preset_N)</make>
+  <make>zigbee.fm_soft_detector($spc, $symbol_table, $preset_N)</make>
   <!-- Make one 'param' node for every Parameter you want settable from the GUI.
        Sub-nodes:
        * name
@@ -16,9 +16,9 @@
     <type>real_vector</type>
   </param>
   <param>
-    <name>Q</name>
-    <key>Q</key>
-    <value>64</value>
+    <name>Samples per chip</name>
+    <key>spc</key>
+    <value>2</value>
     <type>int</type>
   </param>
   <param>
@@ -26,6 +26,7 @@
     <key>preset_N</key>
     <value>-1</value>
     <type>int</type>
+    <hide>part</hide>
   </param>
 
   <!-- Make one 'sink' node per input. Sub-nodes:

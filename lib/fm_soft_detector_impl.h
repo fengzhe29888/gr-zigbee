@@ -30,7 +30,7 @@ namespace gr {
     {
      private:
       int d_N; //the frame length calculated; 
-      int d_Q; //the spreading factor ; 
+      int d_Q; //samples_per_symbol ; 
       int d_preset_N;
       int d_state; // the processing state; 0: searching for sync, 1:synced, looking for d_N by demod, 2: synced, output the N symbols. 
       int d_remaining;//the remaining bits to be processed at the beginning state 2.
@@ -39,7 +39,7 @@ namespace gr {
       std::vector<float> d_symbol_table; //the 16-ary symbol table used in demodulation.
 
      public:
-      fm_soft_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N);
+      fm_soft_detector_impl(const int spc, const std::vector<float> &symbol_table, int preset_N);
       ~fm_soft_detector_impl();
 
       // Where all the action really happens

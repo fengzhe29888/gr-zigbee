@@ -31,20 +31,20 @@ namespace gr {
   namespace zigbee {
 
     fm_soft_detector::sptr
-    fm_soft_detector::make(const int Q, const std::vector<float> &symbol_table, int preset_N)
+    fm_soft_detector::make(const int spc, const std::vector<float> &symbol_table, int preset_N)
     {
       return gnuradio::get_initial_sptr
-        (new fm_soft_detector_impl(Q, symbol_table, preset_N));
+        (new fm_soft_detector_impl(spc, symbol_table, preset_N));
     }
 
     /*
      * The private constructor
      */
-    fm_soft_detector_impl::fm_soft_detector_impl(const int Q, const std::vector<float> &symbol_table, int preset_N)
+    fm_soft_detector_impl::fm_soft_detector_impl(const int spc, const std::vector<float> &symbol_table, int preset_N)
       : gr::block("fm_soft_detector",
               gr::io_signature::make2(2, 2, sizeof(float), sizeof(char)),
               gr::io_signature::make(0, 0, 0)),
-	d_Q(Q),
+	d_Q(32*spc),
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
 	d_state(0),
@@ -127,7 +127,7 @@ namespace gr {
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            printf("The frame length is %d\n", d_N);
+            //printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
             d_state = 2;
             return 0;
