@@ -69,33 +69,6 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>samples_per_chip</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(416, 3)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
       <value>symbol_table</value>
     </param>
     <param>
@@ -112,34 +85,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(360, 827)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>training</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(192, 555)</value>
+      <value>(288, 819)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -194,6 +140,87 @@
     <param>
       <key>_coordinate</key>
       <value>(232, 3)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>training</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,-0.70711+0.70711j,-1,-0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,-0.70711-0.70711j,-1,-0.70711+0.70711j,0+1j,0.70711+0.70711j,1,0.70711-0.70711j,0-1j,0.70711-0.70711j,1,0.70711+0.70711j,0+1j,0.70711+0.70711j,1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(192, 555)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samples_per_chip</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>2</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(416, 3)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>look_window</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>32*2*21*samples_per_chip</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(560, 67)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -311,143 +338,6 @@
     <param>
       <key>_coordinate</key>
       <value>(192, 619)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_null_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_null_sink_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>bus_conns</key>
-      <value>[[0,],]</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(800, 776)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0_1_3_0_0_1_0_2</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/flags</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(824, 595)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0_1_3_0_0_1_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/avg</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(824, 675)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -709,123 +599,6 @@
     </param>
   </block>
   <block>
-    <key>pad_sink</key>
-    <param>
-      <key>id</key>
-      <value>pad_sink_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>txout</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>optional</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(728, 435)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_float_to_complex</key>
-    <param>
-      <key>id</key>
-      <value>blocks_float_to_complex_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(352, 424)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_complex_to_float</key>
-    <param>
-      <key>id</key>
-      <value>blocks_complex_to_float_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(88, 424)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>note</key>
     <param>
       <key>id</key>
@@ -951,135 +724,6 @@
     </param>
   </block>
   <block>
-    <key>foo_burst_tagger</key>
-    <param>
-      <key>id</key>
-      <value>foo_burst_tagger_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>tag_name</key>
-      <value>pmt.intern("pdu_length")</value>
-    </param>
-    <param>
-      <key>mult</key>
-      <value>128</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(528, 427)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>pad_sink</key>
-    <param>
-      <key>id</key>
-      <value>pad_sink_1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>rxout</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>message</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_streams</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>optional</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(584, 763)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0_1_3_0_0_1_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/output</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>float</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(584, 515)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>blocks_repeat</key>
     <param>
       <key>id</key>
@@ -1127,132 +771,81 @@
     </param>
   </block>
   <block>
-    <key>pad_source</key>
+    <key>blocks_null_sink</key>
     <param>
       <key>id</key>
-      <value>pad_source_0</value>
+      <value>blocks_null_sink_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>label</key>
-      <value>rxin</value>
-    </param>
-    <param>
       <key>type</key>
-      <value>complex</value>
+      <value>float</value>
     </param>
     <param>
       <key>vlen</key>
       <value>1</value>
     </param>
     <param>
-      <key>num_streams</key>
+      <key>num_inputs</key>
       <value>1</value>
     </param>
     <param>
-      <key>optional</key>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(864, 736)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>look_window</value>
+    </param>
+    <param>
+      <key>_enabled</key>
       <value>False</value>
     </param>
     <param>
-      <key>_coordinate</key>
-      <value>(48, 747)</value>
+      <key>label</key>
+      <value></value>
     </param>
     <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_peak_detector2_fb</key>
-    <param>
-      <key>id</key>
-      <value>blocks_peak_detector2_fb_0</value>
+      <key>value</key>
+      <value>32*2*21*samples_per_chip</value>
     </param>
     <param>
-      <key>_enabled</key>
-      <value>True</value>
+      <key>type</key>
+      <value></value>
     </param>
     <param>
-      <key>threshold_factor_rise</key>
-      <value>10**(acq_threshold_dB/10)*peak_o_var</value>
-    </param>
-    <param>
-      <key>look_ahead</key>
-      <value>32*10*samples_per_chip</value>
-    </param>
-    <param>
-      <key>alpha</key>
-      <value>0.001</value>
+      <key>short_id</key>
+      <value></value>
     </param>
     <param>
       <key>alias</key>
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(584, 611)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>zigbee_noncoherent_detector</key>
-    <param>
-      <key>id</key>
-      <value>zigbee_noncoherent_detector_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>symbol_table</key>
-      <value>symbol_table</value>
-    </param>
-    <param>
-      <key>spc</key>
-      <value>samples_per_chip</value>
-    </param>
-    <param>
-      <key>preset_N</key>
-      <value>-1</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(360, 755)</value>
+      <value>(968, 3)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1311,6 +904,330 @@
     </param>
   </block>
   <block>
+    <key>foo_burst_tagger</key>
+    <param>
+      <key>id</key>
+      <value>foo_burst_tagger_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>tag_name</key>
+      <value>pmt.intern("pdu_length")</value>
+    </param>
+    <param>
+      <key>mult</key>
+      <value>128</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(528, 427)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_complex_to_float</key>
+    <param>
+      <key>id</key>
+      <value>blocks_complex_to_float_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(88, 424)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_float_to_complex</key>
+    <param>
+      <key>id</key>
+      <value>blocks_float_to_complex_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 424)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>pad_sink</key>
+    <param>
+      <key>id</key>
+      <value>pad_sink_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>txout</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>optional</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(728, 435)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>pad_source</key>
+    <param>
+      <key>id</key>
+      <value>pad_source_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>rxin</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>optional</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(40, 747)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>zigbee_noncoherent_detector</key>
+    <param>
+      <key>id</key>
+      <value>zigbee_noncoherent_detector_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>symbol_table</key>
+      <value>symbol_table</value>
+    </param>
+    <param>
+      <key>spc</key>
+      <value>samples_per_chip</value>
+    </param>
+    <param>
+      <key>preset_N</key>
+      <value>-1</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(288, 752)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>pad_sink</key>
+    <param>
+      <key>id</key>
+      <value>pad_sink_1</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value>rxout</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>message</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_streams</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>optional</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(512, 763)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>parameter</key>
+    <param>
+      <key>id</key>
+      <value>alpha</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>label</key>
+      <value></value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>eng_float</value>
+    </param>
+    <param>
+      <key>short_id</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(864, 3)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>parameter</key>
     <param>
       <key>id</key>
@@ -1326,7 +1243,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>-12.0</value>
+      <value>-15.0</value>
     </param>
     <param>
       <key>type</key>
@@ -1349,22 +1266,210 @@
       <value>0</value>
     </param>
   </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0_1_3_0_0_1_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/output</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(584, 515)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0_1_3_0_0_1_0_2</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/flags</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(888, 547)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0_1_3_0_0_1_0_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/avg</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>float</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>append</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(864, 651)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_peak_detector2_fb</key>
+    <param>
+      <key>id</key>
+      <value>blocks_peak_detector2_fb_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>threshold_factor_rise</key>
+      <value>10**(acq_threshold_dB/10)*peak_o_var</value>
+    </param>
+    <param>
+      <key>look_ahead</key>
+      <value>look_window</value>
+    </param>
+    <param>
+      <key>alpha</key>
+      <value>alpha</value>
+    </param>
+    <param>
+      <key>cont_avg</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>fixed_window</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>debug</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(584, 595)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
   <connection>
     <source_block_id>blocks_peak_detector2_fb_0</source_block_id>
     <sink_block_id>blocks_null_sink_0</sink_block_id>
     <source_key>1</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_peak_detector2_fb_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0_1_3_0_0_1_0_0</sink_block_id>
-    <source_key>1</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zigbee_noncoherent_detector_0</source_block_id>
-    <sink_block_id>pad_sink_1</sink_block_id>
-    <source_key>msg_out</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
@@ -1384,18 +1489,6 @@
     <sink_block_id>blocks_peak_detector2_fb_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_complex_to_float_0</source_block_id>
-    <sink_block_id>blocks_delay_2</sink_block_id>
-    <source_key>1</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_delay_2</source_block_id>
-    <sink_block_id>blocks_float_to_complex_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>1</sink_key>
   </connection>
   <connection>
     <source_block_id>pad_source_0</source_block_id>
@@ -1464,14 +1557,14 @@
     <sink_key>in</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_multiply_xx_0</source_block_id>
-    <sink_block_id>blocks_complex_to_float_0</sink_block_id>
-    <source_key>0</source_key>
+    <source_block_id>blocks_peak_detector2_fb_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0_1_3_0_0_1_0_0</sink_block_id>
+    <source_key>1</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>foo_burst_tagger_0</source_block_id>
-    <sink_block_id>pad_sink_0</sink_block_id>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1482,9 +1575,33 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <source_block_id>foo_burst_tagger_0</source_block_id>
+    <sink_block_id>pad_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_multiply_xx_0</source_block_id>
+    <sink_block_id>blocks_complex_to_float_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_delay_2</source_block_id>
     <sink_block_id>blocks_float_to_complex_0</sink_block_id>
     <source_key>0</source_key>
+    <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_complex_to_float_0</source_block_id>
+    <sink_block_id>blocks_delay_2</sink_block_id>
+    <source_key>1</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zigbee_noncoherent_detector_0</source_block_id>
+    <sink_block_id>pad_sink_1</sink_block_id>
+    <source_key>msg_out</source_key>
     <sink_key>0</sink_key>
   </connection>
 </flow_graph>
