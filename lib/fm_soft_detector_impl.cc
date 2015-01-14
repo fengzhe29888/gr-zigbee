@@ -63,17 +63,23 @@ namespace gr {
     int
     fm_soft_detector_impl::demodulator(const float input[])
     {
+
+
 	float max_out = -INFINITY; //the max matched filter output among 16 pulses. 
         int max_index =0; 
 	//16-ary demodulation
         for(int dj = 0; dj < 16; dj++){
-	  float matched_out =0;
+          int d_align = volk_get_alignment();
+          float *d_output = (float*)volk_malloc(1*sizeof(float), d_align);
+          float *d_taps = &d_symbol_table[dj*d_Q];
+	  /*float matched_out =0;
           for(int dk = 0; dk < d_Q; dk++){
             matched_out += d_symbol_table[dj*d_Q+dk]*input[dk]; 
-          }
-	  //printf("matched_out is %d, %f\n", dj, matched_out);
-          if(matched_out> max_out){
-            max_out = matched_out;
+          }//*/
+          volk_32f_x2_dot_prod_32f_a(d_output,input, d_taps, d_Q );
+	  //printf("matched_out is %d, %f\n", dj, *d_output);
+          if(*d_output> max_out){
+            max_out = *d_output;
             max_index = dj;
           }
         }// for j=0~16; 
@@ -127,7 +133,7 @@ namespace gr {
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            //printf("The frame length is %d\n", d_N);
+            printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
             d_state = 2;
             return 0;
@@ -150,16 +156,17 @@ namespace gr {
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
 	    d_byte_out[1] = demodulator(&in_data[(2*j+1)*d_Q]);
             int result = d_byte_out[0]+ 16*d_byte_out[1];
-	    out[j] = result;
+	    //out[j] = result;
+            *(d_buf_index +j) = result;
           }
-          std::memcpy(buf_index, out, process);
-          buf_index = buf_index + process;
+          //std::memcpy(d_buf_index, out, process);
+          d_buf_index = d_buf_index + process;
           if(d_remaining ==0){
             d_state = 0;
             pmt::pmt_t meta = pmt::make_dict();
             meta = pmt::dict_add(meta, pmt::mp("frame_length"), pmt::from_long(d_N));
             pmt::pmt_t payload = pmt::make_blob(&d_buf[0], d_N);
-            buf_index = &d_buf[0];
+            d_buf_index = &d_buf[0];
             message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{

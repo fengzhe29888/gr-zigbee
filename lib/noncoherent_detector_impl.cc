@@ -70,7 +70,7 @@ namespace gr {
         int max_index =0; 
 	//16-ary demodulation
         for(int dj = 0; dj < 16; dj++){
-          std::vector<gr_complex> multply(d_Q);
+/*          std::vector<gr_complex> multply(d_Q);
           volk_32fc_x2_multiply_conjugate_32fc(&multply[0], input, &d_symbol_table[dj*d_Q], d_Q);
           for(int dk =0; dk < d_Q; dk++){
             d_noncoherent_out = d_noncoherent_out + multply[dk];
@@ -78,6 +78,11 @@ namespace gr {
           multply.clear();
           d_out = real(d_noncoherent_out)*real(d_noncoherent_out)+imag(d_noncoherent_out)*imag(d_noncoherent_out);
           d_noncoherent_out = 0; 
+//*/
+          int d_align = volk_get_alignment();
+          gr_complex *d_output = (gr_complex*)volk_malloc(1*sizeof(gr_complex), d_align);
+          volk_32fc_x2_conjugate_dot_prod_32fc(d_output,input, &d_symbol_table[dj*d_Q], d_Q);
+          d_out = real(*d_output)*real(*d_output)+imag(*d_output)*imag(*d_output);
 	  //printf("d_matched_out is %d, %f\n", dj, d_out);
           if(d_out> max_out){
             max_out = d_out;
@@ -157,10 +162,11 @@ namespace gr {
             d_byte_out[0] = demodulator(&in_data[(2*j)*d_Q]);
 	    d_byte_out[1] = demodulator(&in_data[(2*j+1)*d_Q]);
             int result = d_byte_out[0]+ 16*d_byte_out[1];
-	    out[j] = result;
+	    //out[j] = result;
+            *(d_buf_index +j) = result;
           }
-          std::memcpy(buf_index, out, process);
-          buf_index = buf_index + process;
+          //std::memcpy(buf_index, out, process);
+          d_buf_index = d_buf_index + process;
           if(d_remaining ==0){
             d_state = 0;
             pmt::pmt_t meta = pmt::make_dict();
@@ -169,7 +175,7 @@ namespace gr {
               printf("%dth buffer is %d\n",bi, buf[bi]);
             }//*/
             pmt::pmt_t payload = pmt::make_blob(&d_buf[0], d_N);
-            buf_index = &d_buf[0];
+            d_buf_index = &d_buf[0];
             message_port_pub(pmt::mp("msg_out"), cons(meta,payload)); 
           }
           else{
