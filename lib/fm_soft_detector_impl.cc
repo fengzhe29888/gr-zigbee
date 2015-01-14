@@ -48,9 +48,19 @@ namespace gr {
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
 	d_state(0),
-	d_remaining(0)
+	d_remaining(0),
+	d_nfilters(16)
     {
       message_port_register_out(pmt::mp("msg_out"));
+      d_filters = std::vector<filter::kernel::fir_filter_fff*>(d_nfilters);
+      std::vector<float> fil_taps;
+      for(int i = 0; i < d_nfilters; i++) {
+        for(int dk = d_Q-1; dk >= 0; dk--){
+	  fil_taps.push_back(d_symbol_table[i*d_Q+dk]);
+        }
+	d_filters[i] = new filter::kernel::fir_filter_fff(1, fil_taps);
+        fil_taps.clear();
+      }       
     }
 
     /*
@@ -63,27 +73,28 @@ namespace gr {
     int
     fm_soft_detector_impl::demodulator(const float input[])
     {
-
-
 	float max_out = -INFINITY; //the max matched filter output among 16 pulses. 
         int max_index =0; 
 	//16-ary demodulation
+        int d_align = volk_get_alignment();
+        float *d_output = (float*)volk_malloc(1*sizeof(float), d_align);
         for(int dj = 0; dj < 16; dj++){
-          int d_align = volk_get_alignment();
-          float *d_output = (float*)volk_malloc(1*sizeof(float), d_align);
-          float *d_taps = &d_symbol_table[dj*d_Q];
+          //float *d_taps = &d_symbol_table[dj*d_Q];
 	  /*float matched_out =0;
           for(int dk = 0; dk < d_Q; dk++){
             matched_out += d_symbol_table[dj*d_Q+dk]*input[dk]; 
           }//*/
-          volk_32f_x2_dot_prod_32f_a(d_output,input, d_taps, d_Q );
+          //volk_32f_x2_dot_prod_32f_a(d_output,input, d_taps, d_Q );
+          d_filters[dj]->filterNdec(d_output, input, 1, d_Q);
 	  //printf("matched_out is %d, %f\n", dj, *d_output);
+
           if(*d_output> max_out){
             max_out = *d_output;
             max_index = dj;
           }
         }// for j=0~16; 
 	//printf("demodulated result is %f and %d\n",max_out, max_index);
+        volk_free(d_output);
         return max_index;
     }
 

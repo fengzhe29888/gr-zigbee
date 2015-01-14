@@ -49,9 +49,19 @@ namespace gr {
 	d_symbol_table(symbol_table),
         d_preset_N(preset_N),
 	d_state(0),
-	d_remaining(0)
+	d_remaining(0),
+        d_nfilters(16)
     {
       message_port_register_out(pmt::mp("msg_out"));
+      d_filters = std::vector<filter::kernel::fir_filter_ccc*>(d_nfilters);
+      std::vector<gr_complex> fil_taps;
+      for(int i = 0; i < d_nfilters; i++) {
+        for(int dk = d_Q-1; dk >= 0; dk--){
+	  fil_taps.push_back(d_symbol_table[i*d_Q+dk]);
+        }
+	d_filters[i] = new filter::kernel::fir_filter_ccc(1, fil_taps);
+        fil_taps.clear();
+      }       
     }
 
     /*
@@ -68,6 +78,8 @@ namespace gr {
         gr_complex d_noncoherent_out;
 	float max_out = -INFINITY; //the max matched filter output among 16 pulses. 
         int max_index =0; 
+        int d_align = volk_get_alignment();
+        gr_complex *d_output = (gr_complex*)volk_malloc(1*sizeof(gr_complex), d_align);
 	//16-ary demodulation
         for(int dj = 0; dj < 16; dj++){
 /*          std::vector<gr_complex> multply(d_Q);
@@ -79,9 +91,9 @@ namespace gr {
           d_out = real(d_noncoherent_out)*real(d_noncoherent_out)+imag(d_noncoherent_out)*imag(d_noncoherent_out);
           d_noncoherent_out = 0; 
 //*/
-          int d_align = volk_get_alignment();
-          gr_complex *d_output = (gr_complex*)volk_malloc(1*sizeof(gr_complex), d_align);
-          volk_32fc_x2_conjugate_dot_prod_32fc(d_output,input, &d_symbol_table[dj*d_Q], d_Q);
+
+          //volk_32fc_x2_conjugate_dot_prod_32fc(d_output,input, &d_symbol_table[dj*d_Q], d_Q);
+          d_filters[dj]->filterNdec(d_output, input, 1, d_Q);
           d_out = real(*d_output)*real(*d_output)+imag(*d_output)*imag(*d_output);
 	  //printf("d_matched_out is %d, %f\n", dj, d_out);
           if(d_out> max_out){
@@ -91,6 +103,7 @@ namespace gr {
 	  d_out =0;
         }// for j=0~16; 
 	//printf("demodulated result is %f and %d\n",max_out, max_index);
+        volk_free(d_output);
         return max_index;
     }
 
@@ -136,7 +149,7 @@ namespace gr {
           }
           if(d_N > 127){// Since 7 bits is used for frame length, the frame length is wrong if it's greater than 127.
             d_state = 0;	        //so we enter state 0 to search the next flags. 
-	    printf("d_N is greater than 127, wrong! search for next flag!! %d\n", d_N); 
+	    //printf("d_N is greater than 127, wrong! search for next flag!! %d\n", d_N); 
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
