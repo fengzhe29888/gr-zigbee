@@ -24,5 +24,5 @@ install(FILES
     api.h
     fm_soft_detector.h
     noncoherent_detector.h
-    DESTINATION include/zigbee
+    zigbee_filter.h DESTINATION include/zigbee
 )

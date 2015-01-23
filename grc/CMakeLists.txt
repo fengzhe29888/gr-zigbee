@@ -19,5 +19,5 @@
 install(FILES
     zigbee_fm_soft_detector.xml
     zigbee_noncoherent_detector.xml
-    DESTINATION share/gnuradio/grc/blocks
+    zigbee_zigbee_filter.xml DESTINATION share/gnuradio/grc/blocks
 )
