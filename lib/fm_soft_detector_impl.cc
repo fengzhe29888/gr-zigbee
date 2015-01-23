@@ -26,7 +26,7 @@
 #include "fm_soft_detector_impl.h"
 #include <stdio.h>
 #include <volk/volk.h>
-
+#include <sys/syscall.h>
 namespace gr {
   namespace zigbee {
 
@@ -68,6 +68,10 @@ namespace gr {
      */
     fm_soft_detector_impl::~fm_soft_detector_impl()
     {
+      for(int i = 0; i < d_nfilters; i++) {
+        delete d_filters[i];
+      }
+
     }
 
     int
@@ -104,6 +108,19 @@ namespace gr {
                        gr_vector_const_void_star &input_items,
                        gr_vector_void_star &output_items)
     {
+      static int first=0;
+        pid_t pid;
+
+        if(first<1) {
+          /* get the process id */
+          if ((pid = syscall(SYS_gettid)) < 0) {
+            perror("Unable to get pid/tid\n");
+          } else {
+            printf("fm_soft-->thread id is %d\n", pid);
+          }
+          first++;
+        }
+
         const float *in_data = (const float *) input_items[0];
         const char *in_flag = (const char *) input_items[1];
         //char *out = (char *) output_items[0];
@@ -113,6 +130,8 @@ namespace gr {
         int process;
         char out[128];
 	//printf("At the beginning: ni is %d, %d, %d\n",ni,ninput_items[0],ninput_items[1]);
+
+
         if(d_state == 0){
           for(int l = 0; l < ni; l++){
 	    //flags have not been detected yet
@@ -144,7 +163,7 @@ namespace gr {
           }
           else{
             d_remaining = d_N; // when d_N is smaller than 127, the frame length detected might form a packet. the remaining bits to be processed in state 2.
-            printf("The frame length is %d\n", d_N);
+            //printf("The frame length is %d\n", d_N);
             consume_each(2*d_Q);
             d_state = 2;
             return 0;
