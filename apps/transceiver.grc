@@ -229,166 +229,6 @@
     </param>
   </block>
   <block>
-    <key>note</key>
-    <param>
-      <key>id</key>
-      <value>note_1</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>you can connect to the Socket PDU with: 'nc -u localhost 52002'</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(336, 27)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_pdu_to_tagged_stream</key>
-    <param>
-      <key>id</key>
-      <value>blocks_pdu_to_tagged_stream_0_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>tag</key>
-      <value>pdu_length</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(624, 483)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_file_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_file_sink_0_1_3_0_0_1_0_4_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>file</key>
-      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/resulta</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>unbuffered</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>append</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(840, 467)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>blocks_null_sink</key>
-    <param>
-      <key>id</key>
-      <value>blocks_null_sink_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>byte</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>bus_conns</key>
-      <value>[[0,],]</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(864, 432)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
     <key>blocks_add_xx</key>
     <param>
       <key>id</key>
@@ -429,92 +269,6 @@
     <param>
       <key>_coordinate</key>
       <value>(896, 824)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>note</key>
-    <param>
-      <key>id</key>
-      <value>note_0_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>note</key>
-      <value>This is for loopback testing. Disable this block an enable the USRP blocks for over-the-air transmission.</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(160, 699)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>analog_sig_source_x</key>
-    <param>
-      <key>id</key>
-      <value>analog_sig_source_x_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>Q</value>
-    </param>
-    <param>
-      <key>waveform</key>
-      <value>analog.GR_COS_WAVE</value>
-    </param>
-    <param>
-      <key>freq</key>
-      <value>f0Ts</value>
-    </param>
-    <param>
-      <key>amp</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>offset</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(344, 731)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -659,30 +413,26 @@
     </param>
   </block>
   <block>
-    <key>ieee802_15_4_rime_stack</key>
+    <key>blocks_multiply_xx</key>
     <param>
       <key>id</key>
-      <value>ieee802_15_4_rime_stack_0</value>
+      <value>blocks_multiply_xx_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>bc_channels</key>
-      <value>[129]</value>
+      <key>type</key>
+      <value>complex</value>
     </param>
     <param>
-      <key>uc_channels</key>
-      <value>[131]</value>
+      <key>num_inputs</key>
+      <value>2</value>
     </param>
     <param>
-      <key>ruc_channels</key>
-      <value>[132]</value>
-    </param>
-    <param>
-      <key>rime_add</key>
-      <value>[23,42]</value>
+      <key>vlen</key>
+      <value>1</value>
     </param>
     <param>
       <key>alias</key>
@@ -702,7 +452,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(352, 176)</value>
+      <value>(728, 768)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -710,33 +460,76 @@
     </param>
   </block>
   <block>
-    <key>blocks_socket_pdu</key>
+    <key>blocks_pdu_to_tagged_stream</key>
     <param>
       <key>id</key>
-      <value>blocks_socket_pdu_0_0</value>
+      <value>blocks_pdu_to_tagged_stream_0_0_0</value>
     </param>
     <param>
       <key>_enabled</key>
-      <value>True</value>
+      <value>False</value>
     </param>
     <param>
       <key>type</key>
-      <value>"UDP_SERVER"</value>
+      <value>byte</value>
     </param>
     <param>
-      <key>host</key>
+      <key>tag</key>
+      <value>pdu_length</value>
+    </param>
+    <param>
+      <key>alias</key>
       <value></value>
     </param>
     <param>
-      <key>port</key>
-      <value>52001</value>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
-      <key>mtu</key>
-      <value>10000</value>
+      <key>minoutbuf</key>
+      <value>0</value>
     </param>
     <param>
-      <key>tcp_no_delay</key>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(608, 483)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_file_sink</key>
+    <param>
+      <key>id</key>
+      <value>blocks_file_sink_0_1_3_0_0_1_0_4_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>file</key>
+      <value>/home/zhe/Dropbox/gnuradio_trunk/gnufiles/resulta</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>unbuffered</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>append</key>
       <value>False</value>
     </param>
     <param>
@@ -748,20 +541,55 @@
       <value></value>
     </param>
     <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(360, 75)</value>
+      <value>(840, 467)</value>
     </param>
     <param>
       <key>_rotation</key>
-      <value>180</value>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_null_sink</key>
+    <param>
+      <key>id</key>
+      <value>blocks_null_sink_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>byte</value>
+    </param>
+    <param>
+      <key>vlen</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>num_inputs</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>bus_conns</key>
+      <value>[[0,],]</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(864, 432)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
     </param>
   </block>
   <block>
@@ -819,7 +647,7 @@
     </param>
     <param>
       <key>msg</key>
-      <value>pmt.intern("Hello World!!")</value>
+      <value>pmt.intern("!")</value>
     </param>
     <param>
       <key>period</key>
@@ -843,7 +671,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(64, 203)</value>
+      <value>(72, 211)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -851,50 +679,18 @@
     </param>
   </block>
   <block>
-    <key>variable_slider</key>
+    <key>note</key>
     <param>
       <key>id</key>
-      <value>acq_threshold_dB</value>
+      <value>note_1</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>label</key>
-      <value>acq_threshold_dB</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>-9.5</value>
-    </param>
-    <param>
-      <key>min</key>
-      <value>-40</value>
-    </param>
-    <param>
-      <key>max</key>
-      <value>20</value>
-    </param>
-    <param>
-      <key>num_steps</key>
-      <value>1000</value>
-    </param>
-    <param>
-      <key>style</key>
-      <value>wx.SL_HORIZONTAL</value>
-    </param>
-    <param>
-      <key>converver</key>
-      <value>float_converter</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value>6,0,1,1</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
+      <key>note</key>
+      <value>you can connect to the Socket PDU with: 'nc -u localhost 52002'</value>
     </param>
     <param>
       <key>alias</key>
@@ -902,7 +698,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(920, 19)</value>
+      <value>(344, -5)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -910,33 +706,205 @@
     </param>
   </block>
   <block>
-    <key>foo_packet_pad</key>
+    <key>blocks_socket_pdu</key>
     <param>
       <key>id</key>
-      <value>foo_packet_pad_0_0</value>
+      <value>blocks_socket_pdu_0_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>debug</key>
+      <key>type</key>
+      <value>"UDP_SERVER"</value>
+    </param>
+    <param>
+      <key>host</key>
+      <value></value>
+    </param>
+    <param>
+      <key>port</key>
+      <value>52001</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>10000</value>
+    </param>
+    <param>
+      <key>tcp_no_delay</key>
       <value>False</value>
     </param>
     <param>
-      <key>delay</key>
-      <value>False</value>
+      <key>alias</key>
+      <value></value>
     </param>
     <param>
-      <key>delay_sec</key>
-      <value>0.001</value>
+      <key>affinity</key>
+      <value></value>
     </param>
     <param>
-      <key>pad_front</key>
+      <key>minoutbuf</key>
       <value>0</value>
     </param>
     <param>
-      <key>pad_tail</key>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(360, 51)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+  </block>
+  <block>
+    <key>ieee802_15_4_rime_stack</key>
+    <param>
+      <key>id</key>
+      <value>ieee802_15_4_rime_stack_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>bc_channels</key>
+      <value>[129]</value>
+    </param>
+    <param>
+      <key>uc_channels</key>
+      <value>[131]</value>
+    </param>
+    <param>
+      <key>ruc_channels</key>
+      <value>[132]</value>
+    </param>
+    <param>
+      <key>rime_add</key>
+      <value>[23,42]</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 152)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>ieee802_15_4_phy</key>
+    <param>
+      <key>id</key>
+      <value>ieee802_15_4_phy_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 376)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>note</key>
+    <param>
+      <key>id</key>
+      <value>note_0_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>note</key>
+      <value>This is for loopback testing. Disable this block an enable the USRP blocks for over-the-air transmission.</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(144, 667)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>analog_sig_source_x</key>
+    <param>
+      <key>id</key>
+      <value>analog_sig_source_x_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>complex</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>Q</value>
+    </param>
+    <param>
+      <key>waveform</key>
+      <value>analog.GR_COS_WAVE</value>
+    </param>
+    <param>
+      <key>freq</key>
+      <value>f0Ts</value>
+    </param>
+    <param>
+      <key>amp</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>offset</key>
       <value>0</value>
     </param>
     <param>
@@ -957,7 +925,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(160, 859)</value>
+      <value>(432, 739)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1016,7 +984,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(320, 891)</value>
+      <value>(296, 827)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1024,26 +992,18 @@
     </param>
   </block>
   <block>
-    <key>blocks_multiply_xx</key>
+    <key>ieee802_15_4_mac</key>
     <param>
       <key>id</key>
-      <value>blocks_multiply_xx_0</value>
+      <value>ieee802_15_4_mac_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>num_inputs</key>
-      <value>2</value>
-    </param>
-    <param>
-      <key>vlen</key>
-      <value>1</value>
+      <key>debug</key>
+      <value>True</value>
     </param>
     <param>
       <key>alias</key>
@@ -1063,7 +1023,148 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(728, 768)</value>
+      <value>(352, 296)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>180</value>
+    </param>
+  </block>
+  <block>
+    <key>foo_packet_pad</key>
+    <param>
+      <key>id</key>
+      <value>foo_packet_pad_0_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>debug</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>delay</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>delay_sec</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>pad_front</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>pad_tail</key>
+      <value>2000</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(136, 795)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>zigbee2_phy</key>
+    <param>
+      <key>id</key>
+      <value>zigbee2_phy_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>alpha</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>acq_threshold_dB</key>
+      <value>acq_threshold_dB</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 536)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>zigbee1_phy</key>
+    <param>
+      <key>id</key>
+      <value>zigbee1_phy_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>acq_threshold_dB</key>
+      <value>acq_threshold_dB</value>
+    </param>
+    <param>
+      <key>alpha</key>
+      <value>0.001</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(344, 456)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1086,7 +1187,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>25.001</value>
+      <value>22.001</value>
     </param>
     <param>
       <key>min</key>
@@ -1130,174 +1231,67 @@
     </param>
   </block>
   <block>
-    <key>zigbee2_phy</key>
+    <key>variable_slider</key>
     <param>
       <key>id</key>
-      <value>zigbee2_phy_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alpha</key>
-      <value>0.001</value>
-    </param>
-    <param>
-      <key>acq_threshold_dB</key>
       <value>acq_threshold_dB</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(344, 568)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>zigbee1_phy</key>
-    <param>
-      <key>id</key>
-      <value>zigbee1_phy_0</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>acq_threshold_dB</key>
+      <key>label</key>
       <value>acq_threshold_dB</value>
     </param>
     <param>
-      <key>alpha</key>
-      <value>0.001</value>
+      <key>value</key>
+      <value>-10.9</value>
+    </param>
+    <param>
+      <key>min</key>
+      <value>-40</value>
+    </param>
+    <param>
+      <key>max</key>
+      <value>20</value>
+    </param>
+    <param>
+      <key>num_steps</key>
+      <value>1000</value>
+    </param>
+    <param>
+      <key>style</key>
+      <value>wx.SL_HORIZONTAL</value>
+    </param>
+    <param>
+      <key>converver</key>
+      <value>float_converter</value>
+    </param>
+    <param>
+      <key>grid_pos</key>
+      <value>6,0,1,1</value>
+    </param>
+    <param>
+      <key>notebook</key>
+      <value></value>
     </param>
     <param>
       <key>alias</key>
       <value></value>
     </param>
     <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(344, 496)</value>
+      <value>(920, 19)</value>
     </param>
     <param>
       <key>_rotation</key>
       <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>ieee802_15_4_phy</key>
-    <param>
-      <key>id</key>
-      <value>ieee802_15_4_phy_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(352, 384)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>ieee802_15_4_mac</key>
-    <param>
-      <key>id</key>
-      <value>ieee802_15_4_mac_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>debug</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(352, 312)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>180</value>
     </param>
   </block>
   <connection>
     <source_block_id>blocks_multiply_xx_0</source_block_id>
     <sink_block_id>blocks_add_xx_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_sig_source_x_0</source_block_id>
-    <sink_block_id>blocks_multiply_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1356,34 +1350,10 @@
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>blocks_pdu_to_tagged_stream_0_0_0</source_block_id>
-    <sink_block_id>blocks_file_sink_0_1_3_0_0_1_0_4_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>blocks_pdu_to_tagged_stream_0_0_0</source_block_id>
-    <sink_block_id>blocks_null_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zigbee1_phy_0</source_block_id>
-    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>zigbee2_phy_0</source_block_id>
     <sink_block_id>ieee802_15_4_mac_0</sink_block_id>
     <source_key>rxout</source_key>
     <sink_key>pdu in</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>zigbee2_phy_0</source_block_id>
-    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
   </connection>
   <connection>
     <source_block_id>zigbee1_phy_0</source_block_id>
@@ -1422,20 +1392,44 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>ieee802_15_4_phy_0</source_block_id>
-    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
     <source_block_id>blocks_message_strobe_0_0</source_block_id>
     <sink_block_id>ieee802_15_4_rime_stack_0</sink_block_id>
     <source_key>strobe</source_key>
     <sink_key>bcin</sink_key>
   </connection>
   <connection>
-    <source_block_id>foo_packet_pad_0_0</source_block_id>
-    <sink_block_id>blocks_throttle_0</sink_block_id>
+    <source_block_id>zigbee2_phy_0</source_block_id>
+    <sink_block_id>blocks_pdu_to_tagged_stream_0_0_0</sink_block_id>
+    <source_key>rxout</source_key>
+    <sink_key>pdus</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_pdu_to_tagged_stream_0_0_0</source_block_id>
+    <sink_block_id>blocks_file_sink_0_1_3_0_0_1_0_4_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>blocks_pdu_to_tagged_stream_0_0_0</source_block_id>
+    <sink_block_id>blocks_null_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>analog_sig_source_x_0</source_block_id>
+    <sink_block_id>blocks_multiply_xx_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>ieee802_15_4_phy_0</source_block_id>
+    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zigbee2_phy_0</source_block_id>
+    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1444,5 +1438,17 @@
     <sink_block_id>blocks_multiply_xx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>1</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>foo_packet_pad_0_0</source_block_id>
+    <sink_block_id>blocks_throttle_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>zigbee1_phy_0</source_block_id>
+    <sink_block_id>foo_packet_pad_0_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
   </connection>
 </flow_graph>
