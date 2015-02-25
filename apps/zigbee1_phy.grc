@@ -69,6 +69,33 @@
     <key>variable</key>
     <param>
       <key>id</key>
+      <value>pulse_table</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>pulse_table_original</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 611)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
       <value>samples_per_chip</value>
     </param>
     <param>
@@ -221,33 +248,6 @@
     <param>
       <key>_coordinate</key>
       <value>(40, 547)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>pulse_table</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>pulse_table_mapped</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(8, 611)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1743,7 +1743,7 @@
     </param>
     <param>
       <key>pulse_table</key>
-      <value>pulse_table_mapped</value>
+      <value>pulse_table</value>
     </param>
     <param>
       <key>alias</key>
